@@ -12,8 +12,8 @@ namespace Microsoft.Cuckoo.Benchmark
   {
     static void Main(string[] args)
     {
-      BenchmarkRunner.Run<CuckooFilterBenchmarks>();
-      BenchmarkRunner.Run<PDSBenchmark>();
+      //BenchmarkRunner.Run<CuckooFilterBenchmarks>();
+      //BenchmarkRunner.Run<PDSBenchmark>();
     }
   }
 }

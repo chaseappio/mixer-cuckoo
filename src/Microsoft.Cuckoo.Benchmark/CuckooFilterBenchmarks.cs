@@ -3,7 +3,7 @@
 //     Copyright (c) Microsoft. All rights reserved.
 // </copyright>
 // -----------------------------------------------------------------------
-
+/*
 namespace Microsoft.Cuckoo.Benchmark
 {
   using System;
@@ -55,3 +55,4 @@ namespace Microsoft.Cuckoo.Benchmark
     }
   }
 }
+*/

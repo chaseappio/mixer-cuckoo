@@ -1,0 +1,29 @@
+pull_request_rules:
+  - name: Releasing
+    conditions:
+      - "#approved-reviews-by>=1"
+      - "base~=(^(master|dev)$)|^release\/"
+      - "head~=(^(master|dev)$)|^release\/"
+      - "-draft"
+      - "status-success=Preflight"
+      - "status-success=Semantic Pull Request"
+      - "status-success=dotnet-chassis"
+      - "label!=manual-merge"
+    actions:
+      merge:
+        method: merge
+        
+  - name: Contributing
+    conditions: &conds
+      - "#approved-reviews-by>=1"
+      - "base~=(^(master|dev)$)|^release\/"
+      - "head~=^(?!master$|dev$|release\/)"
+      - "-draft" 
+      - "status-success=Preflight"
+      - "status-success=Semantic Pull Request"      
+      - "status-success=dotnet-chassis"
+      - "label!=manual-merge"
+    actions:
+      merge:
+        method: squash
+        
